@@ -1,0 +1,23 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0-4",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Philip Jonas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.4",
+    "jade": "^1.10.0",
+    "json-stringify-safe": "^5.0.1",
+    "mysql": "^2.7.0",
+    "socket.io": "^1.3.5"
+  },
+  "subdomain": "pjcjonas-chat",
+  "engines": {
+    "node": "0.10.x"
+  }
+}

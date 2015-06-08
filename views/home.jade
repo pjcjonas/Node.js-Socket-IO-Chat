@@ -1,0 +1,26 @@
+doctype html
+head
+    title!= title
+    link(rel='stylesheet', href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+body
+
+    div.row
+        div.span2
+            ul#people.unstyled
+        div.span4
+            ul#msgs.unstyled
+    div.row
+        div.span5.offset2#login
+            form.form-inline
+                input#name.input-small(type="text",placeholder="Your name")
+                input#join.btn.btn-primary(type="button",name="join",value="Join")
+        div.span5.offset2#chat
+            form#2.form-inline
+                input#msg.input(type="text",placeholder="Your message")
+                input#send.btn.btn-success(type="button",name="send",value="Send")
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/eventmanager.js')
