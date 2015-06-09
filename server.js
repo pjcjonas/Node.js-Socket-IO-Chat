@@ -1,7 +1,5 @@
 // LIBS
 var express = require('express');
-var stringify = require('json-stringify-safe');
-var mysqlmanager = require('./mysqlmanager.js');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -22,7 +20,6 @@ app.use(express.static(__dirname + '/public'));
 
 // Web Sockets Starts
 io.on('connection', function(client){
-    console.log('user connected');
 
     // Client join event
     client.on('join', function(name){
@@ -66,6 +63,6 @@ io.on('connection', function(client){
 
 
 // Web Sockets Ends
-http.listen(8080, function(){
+http.listen(3000, function(){
     console.log('listening on *:8080');
 });
